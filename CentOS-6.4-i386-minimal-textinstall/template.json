@@ -1,0 +1,40 @@
+{
+  "builders": [
+    {
+      "name": "virtualbox",
+      "type": "virtualbox",
+      "boot_command": [
+        "<tab> text ks=http://192.168.1.113/kickstart-files/CentOS-6.4-x86_64/ks.cfg<enter><wait>"
+      ],
+      "boot_wait": "5s",
+      "disk_size": 20480,
+      "guest_os_type": "RedHat_64",
+      "http_directory": "http",
+      "iso_checksum_type": "md5",
+      "iso_checksum": "6b5c727fa76fcce7c9ab6213ad3df75a",
+      "iso_url": "http://192.168.1.113/ISOs/CentOS-6.4-i386-minimal/CentOS-6.4-i386-minimal.iso",
+      "ssh_username": "root",
+      "ssh_password": "t4root123",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "7m",
+      "shutdown_command": "shutdown -P now",
+      "shutdown_timeout": "10s",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "1024"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "1"
+        ]
+      ]
+    }
+  ]
+}
