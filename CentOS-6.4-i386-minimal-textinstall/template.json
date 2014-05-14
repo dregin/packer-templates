@@ -14,7 +14,7 @@
       "iso_checksum": "6b5c727fa76fcce7c9ab6213ad3df75a",
       "iso_url": "http://192.168.1.113/ISOs/CentOS-6.4-i386-minimal/CentOS-6.4-i386-minimal.iso",
       "ssh_username": "root",
-      "ssh_password": "t4root123",
+      "ssh_password": "root_password",
       "ssh_port": 22,
       "ssh_wait_timeout": "7m",
       "shutdown_command": "shutdown -P now",
